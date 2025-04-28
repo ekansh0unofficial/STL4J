@@ -16,23 +16,42 @@ public class A1Template {
     }
 
     /* ------------------ ARRAY ALGORITHMS ------------------ */
-    static int sum(int[] arr) {
-        int total = 0;
-        for (int num : arr) total += num;
-        return total;
-    }
+static int sum(int[] arr) {
+    int total = 0;
+    for (int num : arr) total += num;
+    return total;
+}
 
-    static int min(int[] arr) {
-        int min = Integer.MAX_VALUE;
-        for (int num : arr) min = Math.min(min, num);
-        return min;
-    }
+static int sum(int[] arr, int start, int end) {
+    int total = 0;
+    for (int i = start; i < end; i++) total += arr[i];
+    return total;
+}
 
-    static int max(int[] arr) {
-        int max = Integer.MIN_VALUE;
-        for (int num : arr) max = Math.max(max, num);
-        return max;
-    }
+static int min(int[] arr) {
+    int min = Integer.MAX_VALUE;
+    for (int num : arr) min = Math.min(min, num);
+    return min;
+}
+
+static int min(int[] arr, int start, int end) {
+    int min = Integer.MAX_VALUE;
+    for (int i = start; i < end; i++) min = Math.min(min, arr[i]);
+    return min;
+}
+
+static int max(int[] arr) {
+    int max = Integer.MIN_VALUE;
+    for (int num : arr) max = Math.max(max, num);
+    return max;
+}
+
+
+static int max(int[] arr, int start, int end) {
+    int max = Integer.MIN_VALUE;
+    for (int i = start; i < end; i++) max = Math.max(max, arr[i]);
+    return max;
+}
 
     static int[] reverse(int[] arr) {
         int[] res = Arrays.copyOf(arr, arr.length);
